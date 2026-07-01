@@ -20,63 +20,74 @@ Files: 50 files committed
 
 ## 🎯 下一步：推送到远程仓库
 
-### 选项1️⃣: 推送到 GitHub（推荐）
+### 选项1️⃣: 推送到 Intel InnerSource（推荐✨）
+
+**类似这种仓库：**
+```
+https://github.com/intel-innersource/firmware.boot.uefi.iafw.validation.fiv-tool.execution-copilot-ai
+```
+
+**快速操作（3步）：**
+
+1. **创建InnerSource仓库**
+   - 联系你的团队管理员创建仓库
+   - 建议命名：`firmware.boot.uefi.iafw.dmr.weekly-report-generator`
+
+2. **运行推送脚本**
+   ```bash
+   # 双击运行
+   PUSH_TO_INNERSOURCE.bat
+   
+   # 或手动执行
+   cd "c:\Work\DMR\AI\Native DMR Weekly Report"
+   git remote add origin git@github.com:intel-innersource/firmware.boot.uefi.iafw.dmr.weekly-report-generator.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+3. **访问仓库**
+   ```
+   https://github.com/intel-innersource/firmware.boot.uefi.iafw.dmr.weekly-report-generator
+   ```
+
+📖 **详细指南：** [INTEL_INNERSOURCE_SETUP.md](INTEL_INNERSOURCE_SETUP.md)
+
+---
+
+### 选项2️⃣: 推送到 GitHub（个人）
 
 **步骤：**
 
 1. **在GitHub创建新仓库**
    - 访问: https://github.com/new
-   - 仓库名: `dmr-weekly-report` 或 `native-dmr-weekly-report`
-   - 可见性: **Private** ✅（推荐，因为包含内部工具）
+   - 仓库名: `dmr-weekly-report`
+   - 可见性: **Private** ✅
    - **不要**勾选 "Initialize with README"
-   - 点击 "Create repository"
 
-2. **连接并推送**
+2. **推送**
    ```bash
    cd "c:\Work\DMR\AI\Native DMR Weekly Report"
-   
-   # 添加远程仓库（替换YOUR_USERNAME）
    git remote add origin https://github.com/YOUR_USERNAME/dmr-weekly-report.git
-   
-   # 重命名分支为main
    git branch -M main
-   
-   # 推送到GitHub
-   git push -u origin main
-   ```
-
-3. **验证**
-   - 刷新GitHub页面，应该能看到所有文件
-
----
-
-### 选项2️⃣: 推送到 Intel GitLab
-
-**步骤：**
-
-1. **在Intel GitLab创建新项目**
-   - 访问: https://gitlab.devtools.intel.com/projects/new
-   - 项目名: `dmr-weekly-report`
-   - Visibility: **Private**
-   - 点击 "Create project"
-
-2. **连接并推送**
-   ```bash
-   cd "c:\Work\DMR\AI\Native DMR Weekly Report"
-   
-   # 添加远程仓库（替换YOUR_USERNAME）
-   git remote add origin https://gitlab.devtools.intel.com/YOUR_USERNAME/dmr-weekly-report.git
-   
-   # 重命名分支为main
-   git branch -M main
-   
-   # 推送到GitLab
    git push -u origin main
    ```
 
 ---
 
-### 选项3️⃣: 只保留本地仓库（暂不推送）
+### 选项3️⃣: 推送到 Intel GitLab
+
+```bash
+# 1. 在GitLab创建项目: https://gitlab.devtools.intel.com/projects/new
+# 2. 推送
+cd "c:\Work\DMR\AI\Native DMR Weekly Report"
+git remote add origin https://gitlab.devtools.intel.com/YOUR_USERNAME/dmr-weekly-report.git
+git branch -M main
+git push -u origin main
+```
+
+---
+
+### 选项4️⃣: 只保留本地仓库（暂不推送）
 
 **当前已经是一个完整的本地Git仓库，可以：**
 - 查看历史：`git log`
