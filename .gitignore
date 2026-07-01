@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Generated Reports (optional - 如果想保留报告，注释掉这两行)
+output/*.html
+output/*.csv
+
+# Test Files (optional - 如果想保留测试，注释掉这行)
+test/
+
+# Temporary Files
+*.7z
+*.zip
+*.tmp
+temp_*.txt
+OSXML_Version.html
+
+# Build Packages
+BuildPkg/
+*_BuildPkg.7z
+UP_DMR_*.7z
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Sensitive Data
+*.token
+*_token.txt
+credentials.txt
+.env
+
+# Downloaded artifacts from Artifactory
+OakStreamAPIfwi*.7z
+UP_DMR_*.7z
+*_release_notes.csv
