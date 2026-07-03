@@ -1,0 +1,89 @@
+DMR IFWI Report Generator - Directory Structure
+================================================
+
+dmr-ifwi-report-generator/
+│
+├── 📘 SKILL.md                          ⭐ Claude Code skill definition
+├── 📖 README.md                          Human quick start guide
+├── 📁 STRUCTURE.md                       Directory structure explanation
+├── 📋 REORGANIZATION_SUMMARY.md          Reorganization summary (this migration)
+├── 🌳 DIRECTORY_TREE.txt                 This file (visual tree)
+│
+├── 📦 requirements.txt                   Python dependencies
+├── 🚀 START_HERE.bat                     Windows quick launcher
+├── 📝 GIT_QUICK_START.md                 Git setup guide
+│
+├── 📚 references/                        ⭐ Reference documentation (loaded as needed)
+│   ├── README.md                         Documentation index
+│   ├── project-rules.md                  Complete rule set (was docs/CLAUDE.md)
+│   ├── quick-start.md                    Quick start (was docs/START_HERE.md)
+│   ├── simplified-workflow.md            Detailed workflow steps
+│   ├── artifactory-usage.md              Artifactory API usage guide
+│   ├── platform-rules.md                 Platform-specific extraction rules
+│   ├── simics-requirements.md            Simics version requirements
+│   └── api-token-guide.md                How to get API token
+│
+├── 🔧 scripts/                           Executable scripts
+│   │
+│   ├── 🎯 Generate-IFWI-Report-From-Artifactory.ps1   ⭐ Main entry point
+│   ├── Generate-IFWI-Report.ps1                       Legacy FIV workflow
+│   ├── Generate-Multi-IFWI-Report.ps1                 Multi-Orange report
+│   ├── Install-Dependencies.ps1                       Setup script
+│   ├── Cleanup-TempFiles.ps1                          Cleanup utility
+│   │
+│   ├── 🐍 search_artifactory_by_orange_id.py          Search builds
+│   ├── construct_artifactory_url.py                   Build URLs
+│   ├── extract_artifactory_osxml.py                   Extract data from BuildPkg
+│   ├── extract_up_imh_osxml.py                        Extract UP IMH OSXML
+│   ├── generate_ifwi_report.py                        Generate single HTML
+│   ├── generate_multi_ifwi_report.py                  Generate combined HTML
+│   │
+│   ├── [other scripts...]
+│   │
+│   └── legacy/                           Old scripts (archived)
+│       ├── run_test_ap1_a0.ps1
+│       └── run_test_ap2_a0.ps1
+│
+├── 📂 docs/                              ⚠️ Legacy documentation (use references/ instead)
+│   ├── archived/                         Fully deprecated files
+│   │   ├── DMR Weekly Report.md
+│   │   ├── DEPLOYMENT_CHECKLIST.md
+│   │   └── [other old docs...]
+│   │
+│   └── [various .md files...]           To be consolidated into references/
+│
+├── 📄 output/                            Generated HTML reports
+│   ├── IFWI_Release_Status_2026.26.4.01.html
+│   ├── DMR_Weekly_Status_Report_20260629.html
+│   ├── OSXML_Summary_2026.26.4.01.csv
+│   └── [timestamped reports...]
+│
+└── 🧪 test/                              Test files and data
+    ├── test_artifactory.py
+    ├── test_detect_platform.py
+    ├── test_*.txt
+    └── [other test files...]
+
+
+Legend:
+-------
+⭐ = Important entry points
+📘 = Skill definition
+🔧 = Executable scripts
+📚 = Reference documentation
+📂 = Legacy/deprecated
+📄 = Generated outputs
+🧪 = Test files
+
+
+Quick Navigation:
+-----------------
+For Claude Code:        Read SKILL.md first
+For human users:        Read README.md first
+For all rules:          Read references/project-rules.md
+For quick start:        Read references/quick-start.md
+For API token:          Read references/api-token-guide.md
+For structure info:     Read STRUCTURE.md
+For migration info:     Read REORGANIZATION_SUMMARY.md
+
+Main workflow script:   scripts/Generate-IFWI-Report-From-Artifactory.ps1
